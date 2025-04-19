@@ -159,6 +159,7 @@ name = "assignment"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "asteroid" },
     { name = "faster-whisper" },
     { name = "ffmpeg-python" },
     { name = "gradio" },
@@ -174,6 +175,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "asteroid", specifier = ">=0.7.0" },
     { name = "faster-whisper", specifier = ">=1.1.1" },
     { name = "ffmpeg-python", specifier = ">=0.2.0" },
     { name = "gradio", specifier = ">=5.25.2" },
@@ -185,6 +187,32 @@ requires-dist = [
     { name = "pytube", specifier = ">=15.0.0" },
     { name = "speechbrain", specifier = ">=1.0.3" },
     { name = "transformers", specifier = ">=4.51.3" },
+]
+
+[[package]]
+name = "asteroid"
+version = "0.7.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "asteroid-filterbanks" },
+    { name = "huggingface-hub" },
+    { name = "julius" },
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "pb-bss-eval" },
+    { name = "pytorch-lightning" },
+    { name = "pyyaml" },
+    { name = "scipy" },
+    { name = "soundfile" },
+    { name = "torch" },
+    { name = "torch-optimizer" },
+    { name = "torch-stoi" },
+    { name = "torchaudio" },
+    { name = "torchmetrics" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/02/2a/29e4266e48d244f39471896892cde58801c6469ce2075143026ab371bdb1/asteroid-0.7.0.tar.gz", hash = "sha256:0326f28c5342495cb08ba0520efd0e21e39435dfd78854837fdd5a6c9c9ca410", size = 124577 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/d2/38076c2afc81500b5c2f43c06d3976bdcedb0bcaa84d736faf3ffef19d4f/asteroid-0.7.0-py3-none-any.whl", hash = "sha256:ea97a24901d9d9851b4a594171bd7c6dd900fee2c132b9ce045aa09926d489c7", size = 156358 },
 ]
 
 [[package]]
@@ -300,6 +328,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d0/d6/8cc3c644364199e564e0642674f68b0aeebedc18b6877460c22f7484f3ab/av-14.3.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:96d19099b3867fac67dfe2bb29fd15ef41f1f508d2ec711d1f081e505a9a8d04", size = 34356871 },
     { url = "https://files.pythonhosted.org/packages/27/85/6327062a5bb61f96411c0f444a995dc6a7bf2d7189d9c896aa03b4e46028/av-14.3.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:15dc4a7c916620b733613661ceb7a186f141a0fc98608dfbafacdc794a7cd665", size = 37174375 },
     { url = "https://files.pythonhosted.org/packages/5b/c0/44232f2e04358ecce33a1d9354f95683bb24262a788d008d8c9dafa3622d/av-14.3.0-cp313-cp313-win_amd64.whl", hash = "sha256:f930faa2e6f6a46d55bc67545b81f5b22bd52975679c1de0f871fc9f8ca95711", size = 27433259 },
+]
+
+[[package]]
+name = "cached-property"
+version = "2.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/76/4b/3d870836119dbe9a5e3c9a61af8cc1a8b69d75aea564572e385882d5aefb/cached_property-2.0.1.tar.gz", hash = "sha256:484d617105e3ee0e4f1f58725e72a8ef9e93deee462222dbd51cd91230897641", size = 10574 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/0e/7d8225aab3bc1a0f5811f8e1b557aa034ac04bdf641925b30d3caf586b28/cached_property-2.0.1-py3-none-any.whl", hash = "sha256:f617d70ab1100b7bcf6e42228f9ddcb78c676ffa167278d9f730d1c2fba69ccb", size = 7428 },
 ]
 
 [[package]]
@@ -1434,6 +1471,20 @@ wheels = [
 ]
 
 [[package]]
+name = "mir-eval"
+version = "0.8.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "decorator" },
+    { name = "numpy" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/28/db/3bf39fc9ab0fb757f297f9a0da7207e823688291f9e61bb67b44fa17bc2f/mir_eval-0.8.2.tar.gz", hash = "sha256:141a3e1193276889fc32e911547e73dcb3e829ee8cfea60f7bbcd633c0792569", size = 117649 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1b/5a/69ce896a32ebc8c75deae00b1fba9837567405fa6ef37b377f2e85b856ae/mir_eval-0.8.2-py3-none-any.whl", hash = "sha256:114cda33d8e17408c170598e0b36ed0d71ff4a2fee8eaf9e165b58ecf1c87170", size = 102794 },
+]
+
+[[package]]
 name = "more-itertools"
 version = "10.6.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1963,6 +2014,28 @@ wheels = [
 ]
 
 [[package]]
+name = "pb-bss-eval"
+version = "0.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cached-property" },
+    { name = "einops" },
+    { name = "mir-eval" },
+    { name = "pesq" },
+    { name = "pystoi" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/37/2a/377b05ba6c4293b8e86a3f85184181e3d681b146b812fc98781862490ff9/pb_bss_eval-0.0.2.tar.gz", hash = "sha256:395fbcabc9d3be66490131a67a122d08d4c2cdb88b2ddcd7a4120664c33c6d38", size = 12665 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b2/d5/2825e46367d810dda650655a818fb8185147628f16ee85dd54aaa4dac8b0/pb_bss_eval-0.0.2-py3-none-any.whl", hash = "sha256:a72c2fd04c9f4a4e734cf615029c3877e6e4536225eeaaae05bb0cf014b3af1b", size = 14566 },
+]
+
+[[package]]
+name = "pesq"
+version = "0.0.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/22/e6/f8bdcef3238ac10fb3ce37d150e9b03a152d971febd681f088c6e5e17d8e/pesq-0.0.4.tar.gz", hash = "sha256:b724b28f73fb638522982bd68e8c3c0957e2f45210639a460233b17aa7fc890b", size = 38702 }
+
+[[package]]
 name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2423,6 +2496,19 @@ wheels = [
 ]
 
 [[package]]
+name = "pystoi"
+version = "0.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/bf/3d/1ae8bdb686c6aaaeef474aa6b790abbe38f42b61188b57a974dd9320e521/pystoi-0.4.1.tar.gz", hash = "sha256:1c6f50d6fbfee46b00c922458cdbd27228d9830ca81cea788fd600fc2f7de6e4", size = 10401 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1a/22/60cd92bd3ec00948800984410f4cf5ded5bd8e9b715729f3642efe0edb3d/pystoi-0.4.1-py2.py3-none-any.whl", hash = "sha256:e277b671663d26d35a2416c9c8010a74084e6c3970354506398051a554896939", size = 8218 },
+]
+
+[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -2475,6 +2561,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/78/94/1bfb2c3eaf195b2d72912b65b3d417f2d9ac22491563eca360d453512c59/pytorch-metric-learning-2.8.1.tar.gz", hash = "sha256:fcc4d3b4a805e5fce25fb2e67505c47ba6fea0563fc09c5655ea1f08d1e8ed93", size = 83117 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/60/15/eee4e24c3f5a63b3e73692ff79766a66cab8844e24f5912be29350937592/pytorch_metric_learning-2.8.1-py3-none-any.whl", hash = "sha256:aba6da0508d29ee9661a67fbfee911cdf62e65fc07e404b167d82871ca7e3e88", size = 125923 },
+]
+
+[[package]]
+name = "pytorch-ranger"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "torch" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/bb/32/9269ee5981995e760c3bf51d6cf7f84a2ce051eca2315753910585bce50d/pytorch_ranger-0.1.1.tar.gz", hash = "sha256:aa7115431cef11b57d7dd7bc86e7302a911dae467f62ec5d0b10e1ff744875db", size = 7865 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0d/70/12256257d861bbc3e176130d25be1de085ce7a9e60594064888a950f2154/pytorch_ranger-0.1.1-py3-none-any.whl", hash = "sha256:1e69156c9cc8439185cb8ba4725b18c91947fbe72743e25aca937da8aeb0c8ec", size = 14436 },
 ]
 
 [[package]]
@@ -3281,6 +3379,19 @@ wheels = [
 ]
 
 [[package]]
+name = "torch-optimizer"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pytorch-ranger" },
+    { name = "torch" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/76/87/12f8646a46018d8c84cc74456f82aa263f55eb93b6f96c195f85cd0d2f72/torch-optimizer-0.1.0.tar.gz", hash = "sha256:3f67b71838a23a149afa7b3e1d9d7d3fd7c83b5758c8f3744900de1584969cf5", size = 14318377 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/af/0f/bc49a0f714a1896b80f31db9ba82eebcb2bad9e0f5757184574f8ecfe2f1/torch_optimizer-0.1.0-py3-none-any.whl", hash = "sha256:b7adaed38b66a5c5105a59b30a71c4ab7c9954baf0acabd969fee3dac954657d", size = 72545 },
+]
+
+[[package]]
 name = "torch-pitch-shift"
 version = "1.2.5"
 source = { registry = "https://pypi.org/simple" }
@@ -3293,6 +3404,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/79/a6/722a832bca75d5079f6731e005b3d0c2eec7c6c6863d030620952d143d57/torch_pitch_shift-1.2.5.tar.gz", hash = "sha256:6e1c7531f08d0f407a4c55e5ff8385a41355c5c5d27ab7fa08632e51defbd0ed", size = 4725 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/27/4c/96ac2a09efb56cc3c41fb3ce9b6f4d8c0604499f7481d4a13a7b03e21382/torch_pitch_shift-1.2.5-py3-none-any.whl", hash = "sha256:6f8500cbc13f1c98b11cde1805ce5084f82cdd195c285f34287541f168a7c6a7", size = 5005 },
+]
+
+[[package]]
+name = "torch-stoi"
+version = "0.2.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "pystoi" },
+    { name = "torch" },
+    { name = "torchaudio" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/47/a4/23be9a35b6c5b5c4547d24c52b07f4a5d55406a5ae43d9cce09f2352d75a/torch_stoi-0.2.3.tar.gz", hash = "sha256:228207b8d63548336c5520b156f1e6b30d3ae3db1fb3c41999f01aee087c5f85", size = 9224 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a3/92/ead346e904390a53e71b5da2df7e7839abb16e967ba07fa15addf1f9f37c/torch_stoi-0.2.3-py3-none-any.whl", hash = "sha256:6eee85e33b42fe843a2150de46000f72e7b87cbeb19ae6ab9bbd94b6ec6b3cd2", size = 8146 },
 ]
 
 [[package]]
@@ -3319,17 +3445,16 @@ wheels = [
 
 [[package]]
 name = "torchmetrics"
-version = "1.7.1"
+version = "0.11.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "lightning-utilities" },
     { name = "numpy" },
     { name = "packaging" },
     { name = "torch" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/28/c4/2d921ccf7433ee6d8d6edeaca238674cbbc74528120631c662014795c645/torchmetrics-1.7.1.tar.gz", hash = "sha256:0ac1a0e90d2375866ceb5d3868720c6df7d7d0c5729b7ad36e92c897c6af70c2", size = 565045 }
+sdist = { url = "https://files.pythonhosted.org/packages/f3/ed/9f76e2d65d2e6d67a0ba097f34f4b618fb7466d731476d3d3440dfe2cb8e/torchmetrics-0.11.4.tar.gz", hash = "sha256:1fe45a14b44dd65d90199017dd5a4b5a128d56a8a311da7916c402c18c671494", size = 307144 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e0/ee/4d0a7213a6f412afb3483031009a3b970dd7bed3be24de95ab04fba1c05a/torchmetrics-1.7.1-py3-none-any.whl", hash = "sha256:9a4c45edbd0a1844cc1540c9e71bfbe0ee783a2ed997344d947fefecac90dbb9", size = 961489 },
+    { url = "https://files.pythonhosted.org/packages/fb/47/6e9f9b41c48750a45ad07cc6d43a2979bfc09e6989656aece97cc59cbef1/torchmetrics-0.11.4-py3-none-any.whl", hash = "sha256:45f892f3534e91f3ad9e2488d1b05a93b7cb76b7d037969435a41a1f24750d9a", size = 519162 },
 ]
 
 [[package]]
