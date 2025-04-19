@@ -1,0 +1,22 @@
+[project]
+name = "assignment"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "faster-whisper>=1.1.1",
+    "ffmpeg-python>=0.2.0",
+    "gradio>=5.25.2",
+    "ipykernel>=6.29.5",
+    "librosa>=0.11.0",
+    "openai-whisper",
+    "pyannote-audio>=3.3.2",
+    "pydub>=0.25.1",
+    "pytube>=15.0.0",
+    "speechbrain>=1.0.3",
+    "transformers>=4.51.3",
+]
+
+[tool.uv.sources]
+openai-whisper = { git = "https://github.com/openai/whisper.git" }
